@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MyChat</string>
+    <string name="username">"  Имя пользователя"</string>
+    <string name="CreateNewAccount">Создать новый аккаунт</string>
+    <string name="Password">"  Пароль"</string>
+    <string name="email">"  Email"</string>
+    <string name="Register">Зарегестрироваться</string>
+    <string name="Enter">Войти</string>
+    <string name="EnterApp">Войти</string>
+    <string name="Logout">Выйти</string>
+    <string name="username2">" "</string>
+    <string name="aboutApp">О программе</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="userViewPager">Пользователи</string>
+    <string name="chatsViewPager">Чаты</string>
+    <string name="cannotRegister">Ты не можешь зарегестрироваться по этому логину и паролю</string>
+    <string name="passwordRule">Пароль должен быть минимум из 6 символов</string>
+    <string name="AllFilesAreRequired">Все поля обязательны</string>
+    <string name="InputError">Ошибка Входа</string>
+    <string name="Or">Или</string>
+</resources>
+
