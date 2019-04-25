@@ -4,40 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/new_register_gradients"
     tools:context=".LoginActivity">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/bar_layout" />
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp">
 
-        <LinearLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/EnterApp"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/toolbar"
-            android:layout_gravity="center_vertical"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="15dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/EnterApp"
-                android:textColor="#fff"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            android:backgroundTint="#009688"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            app:hintAnimationEnabled="false">
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/editTextEmailLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@android:color/transparent"
                 android:drawableStart="@drawable/ic_email_login_and_reg"
                 android:drawablePadding="10dp"
                 android:ems="10"
@@ -46,80 +48,74 @@
                 android:maxLines="1"
                 android:padding="30dp"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="20sp" />
+                android:textColorHighlight="@color/white" />
 
+        </android.support.design.widget.TextInputLayout>
 
-            <ImageView
-
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#009688" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            app:hintAnimationEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white">
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/editTextPasswordLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@android:color/transparent"
                 android:drawableStart="@drawable/ic_password"
                 android:drawablePadding="10dp"
                 android:ems="10"
                 android:hint="@string/Password"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:padding="30dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="20sp" />
+                android:padding="25dp" />
+        </android.support.design.widget.TextInputLayout>
 
-            <ImageView
+        <Button
+            android:id="@+id/buttonEnter"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_style_login"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="15dp"
+            android:text="@string/Enter"
+            android:textAllCaps="false"
+            android:textColor="#009688"
+            android:textSize="20sp" />
 
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#009688" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/Or"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/buttonEnter"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/background_button_login"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="15dp"
-                android:text="@string/Enter"
-                android:textAllCaps="false"
-                android:textColor="#009688"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:text="@string/Or"
-                android:textColor="#fff"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/buttonRegister"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/background_button_register"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="15dp"
-                android:text="@string/Register"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-    </ScrollView>
+        <Button
+            android:id="@+id/buttonRegister"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_style_registration"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="15dp"
+            android:text="@string/Register"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </LinearLayout>
 
 </RelativeLayout>

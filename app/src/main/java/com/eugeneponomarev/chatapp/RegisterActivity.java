@@ -2,6 +2,7 @@ package com.eugeneponomarev.chatapp;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -24,9 +25,9 @@ import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText editTextUsername;
-    EditText editTextEmail;
-    EditText editTextPassword;
+    TextInputEditText editTextUsername;
+    TextInputEditText editTextEmail;
+    TextInputEditText editTextPassword;
 
     Button buttonRegister;
 
@@ -73,9 +74,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void components() {
-        editTextUsername = (EditText) findViewById(R.id.editTextUsername);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.password);
+        editTextUsername = (TextInputEditText) findViewById(R.id.editTextUsername);
+        editTextEmail = (TextInputEditText) findViewById(R.id.editTextEmail);
+        editTextPassword = (TextInputEditText) findViewById(R.id.editTextPassword);
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
 

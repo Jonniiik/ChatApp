@@ -39,7 +39,7 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/new_register_gradients"
+            android:background="@drawable/registration_gradient"
             app:tabIndicatorColor="#fff"
             app:tabSelectedTextColor="#fff"
             app:tabTextColor="#fff" />
