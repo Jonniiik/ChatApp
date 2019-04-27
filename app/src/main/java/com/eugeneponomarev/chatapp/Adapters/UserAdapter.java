@@ -70,7 +70,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             super(itemView);
 
             usernameRV = (TextView) itemView.findViewById(R.id.usernameRV);
-            profileImageRV = (ImageView) itemView.findViewById(R.id.profileImageRV);
+            profileImageRV = (ImageView) itemView.findViewById(R.id.profileImage);
         }
     }
 }

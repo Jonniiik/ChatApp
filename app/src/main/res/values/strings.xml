@@ -20,6 +20,6 @@
     <string name="AllFilesAreRequired">Все поля обязательны</string>
     <string name="InputError">Ошибка Входа</string>
     <string name="Or">Или</string>
-    <string name="TypeAMessage">Введите сообщение</string>
+    <string name="TypeAMessage">"  Введите сообщение"</string>
 </resources>
 
