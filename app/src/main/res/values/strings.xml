@@ -21,5 +21,9 @@
     <string name="InputError">Ошибка Входа</string>
     <string name="Or">Или</string>
     <string name="TypeAMessage">"  Введите сообщение"</string>
+    <string name="profileViewPager">Профиль</string>
+    <string name="ImageNoSelected">Изображение не выбрано</string>
+    <string name="Failed">Ошибка</string>
+    <string name="UploadInProgress">Загрузка</string>
 </resources>
 

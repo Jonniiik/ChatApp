@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.eugeneponomarev.chatapp.Adapters.ViewPagerAdapter;
 import com.eugeneponomarev.chatapp.Fragments.ChatsFragment;
+import com.eugeneponomarev.chatapp.Fragments.ProfileFragment;
 import com.eugeneponomarev.chatapp.Fragments.UsersFragment;
 import com.eugeneponomarev.chatapp.model.User;
 import com.google.firebase.auth.FirebaseAuth;
@@ -88,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new ChatsFragment(), getString(R.string.chatsViewPager));
         viewPagerAdapter.addFragment(new UsersFragment(), getString(R.string.userViewPager));
+        viewPagerAdapter.addFragment(new ProfileFragment(),getString(R.string.profileViewPager));
+
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
