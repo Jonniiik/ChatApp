@@ -22,10 +22,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     private Context mContext;
     private List<User> mUsers;
+    private boolean isChat;
 
-    public UserAdapter(Context mContext, List<User> mUsers){
+    public UserAdapter(Context mContext, List<User> mUsers, boolean isChat) {
         this.mContext = mContext;
         this.mUsers = mUsers;
+        this.isChat = isChat;
     }
 
     @NonNull
@@ -39,10 +41,23 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         final User user = mUsers.get(position);
         viewHolder.usernameRV.setText(user.getUsername());
-        if (user.getImageURL().equals("default")){
+        if (user.getImageURL().equals("default")) {
             viewHolder.profileImageRV.setImageResource(R.drawable.mignon_deadpool);
-        } else{
+        } else {
             Glide.with(mContext).load(user.getImageURL()).into(viewHolder.profileImageRV);
+        }
+
+        if (isChat){
+            if (user.getStatus().equals("online")){
+                viewHolder.imageStatusOn.setVisibility(View.VISIBLE);
+                viewHolder.imageStatusOff.setVisibility(View.GONE);
+            } else {
+                viewHolder.imageStatusOn.setVisibility(View.GONE);
+                viewHolder.imageStatusOff.setVisibility(View.VISIBLE);
+            }
+        } else {
+            viewHolder.imageStatusOn.setVisibility(View.GONE);
+            viewHolder.imageStatusOff.setVisibility(View.GONE);
         }
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -61,16 +76,21 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         return mUsers.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView usernameRV;
         public ImageView profileImageRV;
+        public ImageView imageStatusOn;
+        public ImageView imageStatusOff;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             usernameRV = (TextView) itemView.findViewById(R.id.usernameRV);
             profileImageRV = (ImageView) itemView.findViewById(R.id.profileImage);
+            imageStatusOn = (ImageView) itemView.findViewById(R.id.imageStatusOn);
+            imageStatusOff = (ImageView) itemView.findViewById(R.id.imageStatusOff);
+
         }
     }
 }
