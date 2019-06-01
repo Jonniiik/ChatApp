@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e6e6e6"
+    android:background="#154266"
     tools:context=".MessageActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -50,28 +50,13 @@
         android:id="@+id/linearLayoutBottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:padding="5dp">
-
-        <ImageButton
-            android:id="@+id/openCamera"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/ic_camera" />
-
-
-        <ImageButton
-            android:id="@+id/buttonSmile"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/ic_smile" />
+        android:padding="5dp"
+        android:layout_alignParentBottom="true">
 
         <EditText
             android:id="@+id/sendEditText"
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -85,6 +70,7 @@
             android:id="@+id/buttonSend"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:paddingLeft="5dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/ic_send" />
 

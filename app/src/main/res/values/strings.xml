@@ -25,5 +25,7 @@
     <string name="ImageNoSelected">Изображение не выбрано</string>
     <string name="Failed">Ошибка</string>
     <string name="UploadInProgress">Загрузка</string>
+    <string name="YourEmail">Твой email</string>
+    <string name="Reset">Поменять</string>
 </resources>
 

@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,7 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
     TextInputEditText editTextEmail;
     TextInputEditText editTextPassword;
 
-    Button buttonRegister;
+    ImageView buttonRegister;
 
     Toolbar toolbar;
 
@@ -74,11 +75,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void components() {
-        editTextUsername = (TextInputEditText) findViewById(R.id.editTextUsername);
-        editTextEmail = (TextInputEditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (TextInputEditText) findViewById(R.id.editTextPassword);
+        editTextUsername = (TextInputEditText) findViewById(R.id.editTextUsernameRegistration);
+        editTextEmail = (TextInputEditText) findViewById(R.id.editTextEmailRegistration);
+        editTextPassword = (TextInputEditText) findViewById(R.id.editTextPasswordRegistration);
 
-        buttonRegister = (Button) findViewById(R.id.buttonRegister);
+        buttonRegister = (ImageView) findViewById(R.id.buttonRegister);
 
         auth = FirebaseAuth.getInstance();
     }
